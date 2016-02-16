@@ -2,7 +2,7 @@ CPPFLAGS =					\
 	$(MESA_CPPFLAGS)			\
 	-D_POSIX_C_SOURCE=200809L
 
-noinst_PROGRAMS = vkcube
+bin_PROGRAMS = vkcube
 
 BUILT_SOURCES = \
 	vkcube.vert.spv.h			\

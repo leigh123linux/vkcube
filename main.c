@@ -824,7 +824,7 @@ init_wayland(struct vkcube *vc)
 
    VkSurfaceKHR wsi_surface;
 
-   PFN_vkCreateWaylandSurfaceKHR create_wayland_surface =
+   PFN_vkCreateWaylandSurfaceKHR create_wayland_surface = 
        (PFN_vkCreateWaylandSurfaceKHR)vkGetInstanceProcAddr(vc->instance, "vkCreateWaylandSurfaceKHR");
 
    create_wayland_surface(vc->instance,
@@ -928,7 +928,7 @@ extern struct model cube_model;
 int main(int argc, char *argv[])
 {
    struct vkcube vc;
-   bool headless;
+   bool headless = false;
 
    vc.model = cube_model;
    vc.gbm_device = NULL;
